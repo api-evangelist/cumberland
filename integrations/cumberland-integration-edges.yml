@@ -1,0 +1,16 @@
+generated: '2026-10-14'
+method: none
+source:
+- https://zapier.com/apps/cumberland/integrations
+- https://n8n.io/integrations/cumberland/
+- https://composio.dev/toolkits/cumberland
+- https://monid.ai/tools/cumberland
+checked:
+- https://composio.dev/toolkits/cumberland
+- https://monid.ai/tools/cumberland
+- https://n8n.io/integrations/cumberland/
+- https://zapier.com/apps/cumberland/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []

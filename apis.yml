@@ -1,23 +1,80 @@
 aid: cumberland
 name: Cumberland
-description: 'Cumberland is a company surfaced via the API Evangelist harvest backlog (source: market-gap:crypto-exchanges(NYDFS))
-  and added to the network as a stub for full-pipeline profiling.'
+description: Cumberland is the cryptocurrency trading and liquidity arm of DRW, providing institutional OTC spot, derivatives and options liquidity in digital assets. Clients trade through its electronic platforms, Marea and an API (named the Cumberland CPE API on its public status page); the API documentation at apidocs.cumberland.io sits behind a client login.
 url: https://raw.githubusercontent.com/api-evangelist/cumberland/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:market-gap:crypto-exchanges(NYDFS)
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-14 (local-v5; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-13'
-modified: '2026-10-13'
+modified: '2026-10-14'
 tags:
 - Company
-apis: []
+- Cryptocurrency
+- Trading
+- Liquidity
+- OTC
+- Digital Assets
+- Financial Services
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+image: https://res.cloudinary.com/drw/image/upload/v1669155373/comm-cumberland/open-graph/cm-opengraph.png
 common:
+- type: SecurityTxt
+  url: well-known/cumberland-status-security.txt
+- type: WellKnown
+  url: well-known/cumberland-well-known.yml
+- type: Hosts
+  url: hosts/cumberland-hosts.yml
+- type: Vendors
+  url: vendors/cumberland-vendors.yml
+- type: DomainSecurity
+  url: security/cumberland-domain-security.yml
 - type: Website
   url: https://cumberland.io
+- type: StatusPage
+  url: https://status.cumberland.io/
+- type: Newsroom
+  url: https://www.cumberland.io/news
+- type: PrivacyPolicy
+  url: https://www.cumberland.io/privacy-notice
+- type: TermsOfService
+  url: https://www.cumberland.io/terms-and-conditions
+- type: Login
+  url: https://apidocs.cumberland.io/login
+- type: LinkedIn
+  url: https://www.linkedin.com/company/cumberland-drw/
+- type: X
+  url: https://twitter.com/cumberlandsays
+apis:
+- aid: cumberland:cumberland-cpe-api
+  name: Cumberland CPE API
+  description: Electronic trading API for Cumberland institutional clients, listed as "API" on status.cumberland.io; reference documentation is behind a client login at apidocs.cumberland.io, so no contract is published.
+  humanURL: https://apidocs.cumberland.io/
+  tags:
+  - Cryptocurrency
+  - Trading
+  properties:
+  - type: Documentation
+    url: https://apidocs.cumberland.io/
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: apidocs.cumberland.io redirects every path to a client login page (2,650-byte shell), so the CPE API reference and any contract are visible only to onboarded Cumberland counterparties.
+  evidence:
+  - url: https://apidocs.cumberland.io/
+    status: 200
+  - url: https://apidocs.cumberland.io/login
+    status: 200
+  - url: https://status.cumberland.io/
+    status: 200
+  checked: '2026-10-14'
+x-enrichment:
+  date: '2026-10-14'
+  status: enriched
+  artifacts_added: 4
+  pass: local-v5
