@@ -5,7 +5,7 @@ url: https://raw.githubusercontent.com/api-evangelist/cumberland/refs/heads/main
 x-type: company
 x-source: harvest:market-gap:crypto-exchanges(NYDFS)
 x-tier: profiled
-x-tier-reason: enrichment pass 2026-10-14 (local-v5; was harvest)
+x-tier-reason: 'enrichment pass 2026-10-14 (local-v5; was harvest); minimal 2026-10-14: customer-only docs: apidocs.cumberland.io is behind client login, no public contract, 0 operations'
 specificationVersion: '0.20'
 created: '2026-10-13'
 modified: '2026-10-14'
@@ -75,6 +75,6 @@ x-coverage:
   checked: '2026-10-14'
 x-enrichment:
   date: '2026-10-14'
-  status: enriched
+  status: minimal
   artifacts_added: 4
   pass: local-v5
